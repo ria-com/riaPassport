@@ -19,6 +19,22 @@ riaPassport
     $ npm install
 ```
 
+config.js
+```js
+    session: {
+        cookie : {
+            name : "PHPSESSID"
+        },
+        memcached : {
+            host: '127.0.0.1',
+            port: '11211',
+            options: {
+                poolSize: 512
+            }
+        }
+    }
+```
+
 ```js
 var riaSession = require('riaPassport');
 app.use(riaPassport);
