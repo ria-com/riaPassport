@@ -11,9 +11,11 @@
     module.exports = function * init (next){
         this.req.isAuthenticated = false;
         this.req.user = false;
-
         var data =  yield this.req.session.get();
+        var usagePhpSession = false;
+
         if(typeof data === "string") {
+            usagePhpSession = true;
             try{
                 data = parser(data);
             } catch (e){
@@ -39,6 +41,9 @@
                     }
                     this.req.user = user?user.data:user;
                     this.req.isAuthenticated = true;
+                    if(!usagePhpSession){
+                        yield this.req.session.save('passport', this.req.user);
+                    }
                 }
             }
 
