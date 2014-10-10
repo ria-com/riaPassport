@@ -17,9 +17,7 @@
     "email": "l.ihor.p.mogyla@gmail.com"
   },
   "dependencies": {
-    "co-memcahced": "git://github.com/ihormohyla/co-memcahced.git#master",
     "groan" : "git://github.com/mscdex/groan.git#master",
-    "cookies" : "~0.5.0",
     "koa-request" : "*"
   },
   "devDependencies": {
