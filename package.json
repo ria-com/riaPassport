@@ -1,5 +1,5 @@
 {
-  "name": "mriaPassport",
+  "name": "riaPassport",
   "description": "koa ria session with memcached",
   "repository": {
     "type": "git",

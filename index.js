@@ -28,7 +28,6 @@
             }
         }
         if(data && data.person_id){
-
             var options = {
                 method : 'get',
                 auth: config.rest.users.auth
