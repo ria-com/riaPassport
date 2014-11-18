@@ -6,7 +6,7 @@
 
     var config = require('config'),
         request = require('koa-request'),
-        parser = require('groan');
+        parser = JSON.parse;
 
     module.exports = function * init (next){
         this.req.isAuthenticated = false;
