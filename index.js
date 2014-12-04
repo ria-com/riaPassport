@@ -23,7 +23,7 @@
             }
         }
 
-        if(typeof data === "object"){
+        if(typeof data === "object" && data){
             if(data.passport && data.passport.user_id){
                 this.req.user = data.passport;
                 this.req.isAuthenticated = true;
